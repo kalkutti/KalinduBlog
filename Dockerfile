@@ -11,7 +11,7 @@ FROM node:alpine AS nodetailwind
 WORKDIR /src
 COPY . .
 WORKDIR /src/BlazorBlog
-RUN npm run tailwind:dev
+RUN npm run tailwind
 
 FROM restore AS build
 ARG BUILD_CONFIGURATION=Release
